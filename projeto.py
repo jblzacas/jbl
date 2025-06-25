@@ -137,7 +137,7 @@ def mostramenu():
         elif escolha == "5":
             totalgastos()
         elif escolha == "6":
-            print(f"{BRANCO}Saindo do sistema👻{RESET}")
+            print(f"{BRANCO}saindo do melhor sistema do mundo👻{RESET}")
             break
         else:
             print(f"{VERMELHO}Opção não existe, tente de novo{RESET}")
