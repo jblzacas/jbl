@@ -140,5 +140,5 @@ def mostramenu():
             print(f"{BRANCO}saindo do melhor sistema do mundo👻{RESET}")
             break
         else:
-            print(f"{VERMELHO}Opção não existe, tente de novo{RESET}")
+            print(f"{VERMELHO}Opção não existe, digite de novo{RESET}")
 mostramenu()
