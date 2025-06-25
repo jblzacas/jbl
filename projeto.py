@@ -15,15 +15,15 @@ VERDE = '\033[92m'
 def cadastrartipogasto():
     print(f"{AZUL}=== cadastro de tipos de gasto ={RESET}")
     while True:
-        tipo = input(f"{VERDE}digite um tipo de gasto (ou deixe em branco): {RESET}")
+        tipo = input(f"{VERDE}digite um tipo de gasto, (aperta enter se ja terminou): {RESET}")
         if tipo == "":
-            print(f"{VERMELHO}encerrando cadastro de tipos.{RESET}")
+            print(f"{VERMELHO}fechando cadastro de tipos.{RESET}")
             break #se n tiver nada, encerrar o codigo
         elif tipo in tipos_gasto:
-            print(f"{VERDE}tipo de gasto já cadastrado✅.{RESET}")
+            print(f"{VERDE}tipo de gasto cadastrado✅.{RESET}")
         else:
             tipos_gasto.append(tipo)#adiciona um tipo de gasto
-            print(f"{VERDE}tipo '{tipo}' cadastrado com sucesso!✅{RESET}")# sucesso no cadastro do tipo
+            print(f"{VERDE}tipo '{tipo}' cadastrado com sucesso✅{RESET}")# sucesso no cadastro do tipo
 def cadastrargasto():
     if len(tipos_gasto) == 0:
         print(F"{VERMELHO}nenhum tipo de gasto cadastrado❌.{RESET}")
@@ -76,13 +76,13 @@ def buscargastos():
         print(f"{i + 1}. {tipos_gasto[i]}")
         i += 1
     try:
-        escolha = int(input(F"{BRANCO}escolha o número do tipo de gasto para buscar: {RESET}"))
+        escolha = int(input(F"{BRANCO}escolha o número do tipo de gasto: {RESET}"))
         if escolha < 1 or escolha > len(tipos_gasto):
             print("opção invalida.")
             return
         tipoescolhido = tipos_gasto[escolha - 1]
     except ValueError:
-        print(F"{VERMELHO}entrada invalida. digite um número.{RESET}")
+        print(F"{VERMELHO}entrada errada. digite um número.{RESET}")
         return
     encontrados = []
     i = 0
