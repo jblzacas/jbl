@@ -36,11 +36,11 @@ def cadastrargasto():
     try:
         escolha = int(input(F"{AZUL}escolha o número do tipo de gasto: {RESET}"))
         if escolha < 1 or escolha > len(tipos_gasto):
-            print(F"{VERMELHO}opção inválida❌.{RESET}")
+            print(F"{VERMELHO}opção errada❌.{RESET}")
             return# escolher tipo de acordo com o numero designado
         tipo_escolhido = tipos_gasto[escolha - 1]
     except ValueError:
-        print(F"{VERMELHO}entrada inválida❌. digite um número{RESET}.")
+        print(F"{VERMELHO}entrada errada❌. digite um número{RESET}.")
         return
     dia = input(F"{BRANCO}digite o dia do mês (1-31): {RESET}")
     valor = input(F"{CIANO}digite o valor do gasto: {RESET}")
@@ -113,9 +113,9 @@ def totalgastos():
         try:
             total += float(gasto["valor"])
         except ValueError:
-            print(f"{VERMELHO}Valor inválido no gasto: {gasto}.{RESET}")
+            print(f"{VERMELHO}Valor incorreto no gasto: {gasto}.{RESET}")
         i += 1
-    print(f"Total de gastos cadastrados em {mesatual}: R$ {total:}")
+    print(f"total de gastos cadastrados em {mesatual}: R$ {total:}")
 def mostramenu():
     while True:
         print(f"{BRANCO}=== sistema de controle de gastos ==={RESET}")
