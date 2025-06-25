@@ -1,17 +1,12 @@
 import datetime
 gastos = []
 tipos_gasto = []
-
-CINZA = '\033[90m'
-MAGENTA = '\033[35m'
 VERMELHO = '\033[31m'
-AMARELO = '\033[33m'
 BRANCO = "\033[97m"
 RESET = '\033[0m'
 AZUL = '\033[34m'
 CIANO = '\033[36m'
 VERDE = '\033[92m'
-
 def cadastrartipogasto():
     print(f"{AZUL}=== cadastro de tipos de gasto ={RESET}")
     while True:
