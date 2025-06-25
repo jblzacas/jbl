@@ -20,10 +20,10 @@ def cadastrartipogasto():
             print(f"{VERMELHO}encerrando cadastro de tipos.{RESET}")
             break #se n tiver nada, encerrar o codigo
         elif tipo in tipos_gasto:
-            print(f"{VERDE}Tipo de gasto já cadastrado✅.{RESET}")
+            print(f"{VERDE}tipo de gasto já cadastrado✅.{RESET}")
         else:
             tipos_gasto.append(tipo)#adiciona um tipo de gasto
-            print(f"{VERDE}Tipo '{tipo}' cadastrado com sucesso!✅{RESET}")# sucesso no cadastro do tipo
+            print(f"{VERDE}tipo '{tipo}' cadastrado com sucesso!✅{RESET}")# sucesso no cadastro do tipo
 def cadastrargasto():
     if len(tipos_gasto) == 0:
         print(F"{VERMELHO}nenhum tipo de gasto cadastrado❌.{RESET}")
@@ -36,14 +36,14 @@ def cadastrargasto():
     try:
         escolha = int(input(F"{AZUL}escolha o número do tipo de gasto: {RESET}"))
         if escolha < 1 or escolha > len(tipos_gasto):
-            print(F"{VERMELHO}Opção inválida❌.{RESET}")
+            print(F"{VERMELHO}opção inválida❌.{RESET}")
             return# escolher tipo de acordo com o numero designado
         tipo_escolhido = tipos_gasto[escolha - 1]
     except ValueError:
         print(F"{VERMELHO}entrada inválida❌. digite um número{RESET}.")
         return
-    dia = input(F"{BRANCO}Digite o dia do mês (1-31): {RESET}")
-    valor = input(F"{CIANO}Digite o valor do gasto: {RESET}")
+    dia = input(F"{BRANCO}digite o dia do mês (1-31): {RESET}")
+    valor = input(F"{CIANO}digite o valor do gasto: {RESET}")
     gasto = {
         "tipo": tipo_escolhido,
         "dia": dia,
@@ -68,7 +68,7 @@ def consultargastos():
     print()
 def buscargastos():
     if len(tipos_gasto) == 0:
-        print(F"{VERMELHO}Nenhum tipo de gasto cadastrado para buscar.{RESET}")
+        print(F"{VERMELHO}nenhum tipo de gasto cadastrado para buscar.{RESET}")
         return
     print(F"{BRANCO}tipos de gasto disponíveis:{RESET}")
     i = 0
@@ -92,7 +92,7 @@ def buscargastos():
             encontrados.append(gasto)
         i += 1
     if len(encontrados) == 0:
-        print(f"{VERMELHO}Nenhum gasto encontrado para o tipo '{tipoescolhido}'.{RESET}")
+        print(f"{VERMELHO}nenhum gasto encontrado para o tipo '{tipoescolhido}'.{RESET}")
         return
     print(f"{BRANCO}=== Gastos do tipo '{tipoescolhido}' ==={RESET}")
     i = 0
@@ -137,8 +137,8 @@ def mostramenu():
         elif escolha == "5":
             totalgastos()
         elif escolha == "6":
-            print(f"{BRANCO}Saindo do sistema. Até a próxima!👻{RESET}")
+            print(f"{BRANCO}Saindo do sistema👻{RESET}")
             break
         else:
-            print(f"{VERMELHO}Opção inválida. Tente novamente.{RESET}")
+            print(f"{VERMELHO}Opção não existe, tente de novo{RESET}")
 mostramenu()
